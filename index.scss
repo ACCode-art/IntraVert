@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+}
+
+// colors
+
+$background-primary: black;
+$background-secondary: #09191b;
+$hover-color: #db9d47;
+$off-white: rgb(151, 151, 151);
+
+// mixins
+
+.main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 208, 7);
+}
+
+.main__left {
+  flex: 0.75;
+  background-color: $background-primary;
+
+  .header__left {
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    padding: 0 2vw;
+
+    img {
+      width: 60px;
+      transition: 600ms;
+
+      &:hover {
+        transform: rotate(360deg) scale(1.3);
+        cursor: pointer;
+      }
+    }
+
+    p {
+      margin-left: 10px;
+    }
+  }
+
+  .message__board {
+    position: absolute;
+    height: 84.5vh;
+    width: 71vw;
+
+    bottom: 0;
+    left: 0;
+
+    .message__boardHeader {
+      position: relative;
+      color: white;
+      background-color: $background-secondary;
+      display: flex;
+      align-items: center;
+      height: 8%;
+      padding: 0 2vw;
+
+      .message__boardHeader-pic {
+        width: 70px;
+      }
+
+      .current-chat-name {
+        margin-left: 10px;
+      }
+
+      .online-notification {
+        margin-left: 20px;
+        opacity: 0.7;
+      }
+
+      .online-blinker {
+        background-color: green;
+        width: 10px;
+        height: 10px;
+        margin-left: 10px;
+      }
+    }
+
+    .message__boardBody {
+      height: 84%;
+      padding-left: 50px;
+      overflow-y: scroll;
+
+      .chat__boxHeader {
+        color: white;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        padding-left: 67px;
+
+        .chat-box-time {
+          margin-left: 10px;
+          font-size: 12px;
+          color: $hover-color;
+          font-style: italic;
+          opacity: 0.7;
+        }
+      }
+
+      .chat__boxBody {
+        color: $off-white;
+        padding-left: 67px;
+        line-height: 2;
+        margin: 0px 0 20px 0;
+      }
+
+      .chat__boxLine {
+        background-color: $off-white;
+        margin-left: 67px;
+        height: 1px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .chat__input {
+      color: white;
+      height: 7%;
+      padding-left: 117px;
+
+      input {
+        color: white;
+        margin-top: 13px;
+        height: 40px;
+        width: 100%;
+        background-color: $background-secondary;
+        outline: none;
+        border: none;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.main__right {
+  flex: 0.25;
+  background-color: $background-secondary;
+
+  .header__right {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 8vh;
+    padding: 0 50px;
+
+    .profile {
+      width: 50px;
+      transition: 300ms;
+
+      &:hover {
+        cursor: pointer;
+        border-radius: 25px;
+      }
+    }
+
+    p {
+      margin-right: 10px;
+      transition: 300ms;
+
+      &:hover {
+        color: $hover-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .header__rightSearch {
+    display: flex;
+    align-items: center;
+    height: 5vh;
+    padding: 0 50px;
+
+    input {
+      color: white;
+      width: 100%;
+      height: 70%;
+      outline: none;
+      background-color: $background-primary;
+      border: none;
+      padding-left: 10px;
+    }
+  }
+
+  .header__rightSearch-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 87vh;
+    padding: 0 50px;
+    overflow-y: scroll;
+
+    img {
+      margin-top: 20px;
+      width: 300px;
+    }
+  }
+}
+
+//scrollbar styling
+
+.message__boardBody::-webkit-scrollbar {
+  width: 5px;
+}
+
+.message__boardBody::-webkit-scrollbar-thumb {
+  background-color: $background-primary;
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 1px solid $off-white;
+}
+
+.header__rightSearch-results::-webkit-scrollbar {
+  width: 10px;
+  background-color: $background-secondary;
+}
+
+.header__rightSearch-results::-webkit-scrollbar-thumb {
+  background-color: $background-primary;
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 1px solid $off-white;
+}
