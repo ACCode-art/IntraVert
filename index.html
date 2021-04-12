@@ -7,10 +7,26 @@
     <title>IntraVert</title>
     <link rel="stylesheet" href="/index.css" />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
     </style>
   </head>
   <body>
+    <div class="login">
+      <img src="/img/IntraVert Logo.png" alt="" />
+      <form action="">
+        <input
+          type="text"
+          class="login__username loginInput"
+          placeholder="Username"
+        />
+        <input
+          type="text"
+          class="login__password loginInput"
+          placeholder="Password"
+        />
+        <button class="login__button">Login</button>
+      </form>
+    </div>
     <div class="main">
       <div class="main__left">
         <div class="header__left">
@@ -36,13 +52,13 @@
               type="text"
               placeholder="say something nice..."
             />
-            <button>send</button>
+            <button class="send__button">send</button>
           </div>
         </div>
       </div>
       <div class="main__right">
         <div class="header__right">
-          <p>sign out</p>
+          <p class="signout__button">sign out</p>
           <img
             class="profile"
             src="https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"

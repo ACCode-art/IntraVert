@@ -1,8 +1,74 @@
 * {
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  background-color: #09191b;
+}
+
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #09191b;
+}
+
+.login img {
+  width: 100px;
+}
+
+.login form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login form .loginInput {
+  color: white;
+  width: 300px;
+  height: 40px;
+  margin: 10px;
+  padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.418);
+}
+
+.login form .login__button {
+  width: 300px;
+  height: 40px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.login form .login__button:hover {
+  background-color: #db9d47;
+  cursor: pointer;
 }
 
 .main {
@@ -12,6 +78,8 @@
   width: 100vw;
   height: 100vh;
   background-color: black;
+  -webkit-animation: fade 1500ms ease-in-out;
+          animation: fade 1500ms ease-in-out;
   /*  background-color: rgb(0, 208, 7); */
 }
 
@@ -108,7 +176,7 @@
   height: 84%;
   overflow-y: scroll;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .main__left .message__board .message__boardBody .chat__box {
@@ -184,7 +252,6 @@
   color: white;
   background-color: #09191b;
   cursor: pointer;
-  border-left: 1px solid #979797;
 }
 
 .main__right {
@@ -301,15 +368,15 @@
 .lightMode {
   background-color: #db9d47 !important;
   color: black !important;
-  -webkit-animation: fade 300ms ease-in alternate;
-          animation: fade 300ms ease-in alternate;
+  -webkit-animation: fade 600ms ease-in alternate;
+          animation: fade 600ms ease-in alternate;
 }
 
 .lightModeTwo {
   background-color: #e9b46b;
   color: black !important;
-  -webkit-animation: fade 300ms ease-in alternate;
-          animation: fade 300ms ease-in alternate;
+  -webkit-animation: fade 600ms ease-in alternate;
+          animation: fade 600ms ease-in alternate;
 }
 
 @-webkit-keyframes fade-in {
