@@ -48,9 +48,19 @@
         </div>
       </div>
       <div class="chatInput">
-        <form action="submit">
-          <input class="inputName" type="text" placeholder="Name..." />
-          <input class="inputMessage" type="text" placeholder="Message..." />
+        <form method="POST" action="/">
+          <input
+            class="inputName"
+            type="text"
+            name="inputName"
+            placeholder="Name..."
+          />
+          <input
+            class="inputMessage"
+            type="text"
+            name="inputMessage"
+            placeholder="Message..."
+          />
           <button class="inputSend">SEND</button>
         </form>
       </div>
