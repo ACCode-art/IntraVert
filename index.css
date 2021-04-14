@@ -72,26 +72,7 @@ body {
   cursor: pointer;
 }
 
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  -webkit-animation: fade 1500ms ease-in-out;
-          animation: fade 1500ms ease-in-out;
-  /*  background-color: rgb(0, 208, 7); */
-}
-
-.main__left {
-  -webkit-box-flex: 0.75;
-      -ms-flex: 0.75;
-          flex: 0.75;
-  background-color: black;
-}
-
-.main__left .header__left {
+.header {
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,188 +80,58 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 50px;
   height: 8vh;
-  padding: 0 2vw;
+  background-color: black;
 }
 
-.main__left .header__left img {
-  width: 60px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
-}
-
-.main__left .header__left img:hover {
-  -webkit-transform: rotate(360deg) scale(1.3);
-          transform: rotate(360deg) scale(1.3);
-  cursor: pointer;
-}
-
-.main__left .header__left p {
-  margin-left: 10px;
-}
-
-.main__left .header__left .lm {
-  margin-left: 82%;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-}
-
-.main__left .header__left .lm:hover {
-  cursor: pointer;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-}
-
-.main__left .message__board {
-  position: absolute;
-  height: 84.5vh;
-  width: 71%;
-  bottom: 0;
-  left: 0;
-}
-
-.main__left .message__board .message__boardHeader {
-  border-bottom: 1px solid grey;
-  position: relative;
-  color: white;
-  background-color: #09191b;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 8%;
-  padding: 0 2vw;
-}
-
-.main__left .message__board .message__boardHeader .message__boardHeader-pic {
-  width: 70px;
-}
-
-.main__left .message__board .message__boardHeader .current-chat-name {
-  margin-left: 30px;
-}
-
-.main__left .message__board .message__boardHeader .online-notification {
-  margin-left: 20px;
-  opacity: 0.7;
-}
-
-.main__left .message__board .message__boardHeader .online-blinker {
-  background-color: green;
-  width: 10px;
-  height: 10px;
-  margin-left: 10px;
-}
-
-.main__left .message__board .message__boardBody {
-  height: 84%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  padding-top: 40px;
-}
-
-.main__left .message__board .message__boardBody .chat__box {
-  -webkit-animation: fade-in 1000ms ease-in-out;
-          animation: fade-in 1000ms ease-in-out;
-  background-color: #09191b;
-  margin-left: 110px;
-}
-
-.main__left .message__board .message__boardBody .chat__boxHeader {
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 50px;
-  padding-left: 7px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.main__left .message__board .message__boardBody .chat__boxHeader .chat-box-time {
-  margin-left: 10px;
-  font-size: 12px;
-  color: #db9d47;
-  font-style: italic;
-  opacity: 0.7;
-}
-
-.main__left .message__board .message__boardBody .chat__boxBody {
-  color: #979797;
-  padding-left: 7px;
-  line-height: 2;
-  padding-bottom: 10px;
-  margin: 0px 0 20px 0;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.main__left .message__board .chat__input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-  height: 7%;
-  padding-left: 117px;
-}
-
-.main__left .message__board .chat__input .chat__inputName {
-  width: 100px;
-  color: white;
-  height: 40px;
-  background-color: #09191b;
-  outline: none;
-  border: none;
-  padding: 10px;
-  margin-right: 10px;
-}
-
-.main__left .message__board .chat__input .chat__inputField {
-  color: white;
-  height: 40px;
+.header .header__left {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #09191b;
-  outline: none;
-  border: none;
-  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.main__left .message__board .chat__input button {
-  width: 10%;
-  height: 40px;
-  outline: none;
-  border: none;
-  background-color: #db9d47;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-  font-size: 15px;
-  font-weight: bold;
+.header .header__left img {
+  width: 60px;
 }
 
-.main__left .message__board .chat__input button:hover {
-  color: white;
-  background-color: #09191b;
-  cursor: pointer;
+.header .header__left .fa {
+  margin-left: 10px;
 }
 
-.main__right {
-  -webkit-box-flex: 0.25;
-      -ms-flex: 0.25;
-          flex: 0.25;
-  background-color: #09191b;
+.header .header__left p {
+  margin-left: 10px;
+  color: #9e9e9e;
 }
 
-.main__right .header__right {
+.header .header__right {
+  width: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+}
+
+.main {
+  width: 100vw;
+  height: 92vh;
+  background-color: #0f0f0f;
+  padding: 0 10%;
+}
+
+.main .currentRoom {
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,114 +139,120 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 8vh;
-  padding: 0 50px;
+  height: 10%;
 }
 
-.main__right .header__right .profile {
-  width: 50px;
-  -webkit-transition: 300ms;
-  transition: 300ms;
+.main .currentRoom img {
+  height: 80%;
 }
 
-.main__right .header__right .profile:hover {
-  cursor: pointer;
-  border-radius: 25px;
+.main .currentRoom p {
+  margin-left: 20px;
 }
 
-.main__right .header__right p {
-  margin-right: 20px;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-}
-
-.main__right .header__right p:hover {
-  color: #db9d47;
-  cursor: pointer;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-}
-
-.main__right .header__rightSearch {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 5vh;
-  padding: 0 50px;
-}
-
-.main__right .header__rightSearch input {
+.main .roomChat {
   color: white;
-  width: 100%;
-  height: 70%;
-  outline: none;
-  background-color: black;
-  border: none;
-  padding-left: 10px;
-}
-
-.main__right .header__rightSearch-results {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 87vh;
-  padding: 0 50px;
+  height: 80%;
   overflow-y: scroll;
 }
 
-.main__right .header__rightSearch-results img {
-  margin-top: 20px;
-  width: 300px;
-}
-
-.message__boardBody::-webkit-scrollbar {
-  width: 5px;
-}
-
-.message__boardBody::-webkit-scrollbar-thumb {
-  background-color: grey;
-  border-radius: 20px;
-  /* roundness of the scroll thumb */
-  /* border: 1px solid $off-white; */
-}
-
-.header__rightSearch-results::-webkit-scrollbar {
-  width: 10px;
+.main .roomChat .message {
   background-color: #09191b;
+  margin-top: 20px;
 }
 
-.header__rightSearch-results::-webkit-scrollbar-thumb {
-  background-color: black;
+.main .roomChat .message .message__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+}
+
+.main .roomChat .message .message__header .message__date {
+  margin-left: 20px;
+  color: #db9d47;
+}
+
+.main .roomChat .message .message__body {
+  padding: 10px 0 20px 0;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.main .chatInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10%;
+}
+
+.main .chatInput form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 35%;
+}
+
+.main .chatInput .inputName {
+  padding-left: 5px;
+  color: white;
+  width: 150px;
+  background-color: rgba(255, 255, 255, 0.027);
+  outline: none;
+  border: 1px solid grey;
+}
+
+.main .chatInput .inputMessage {
+  padding-left: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 20px;
+  color: white;
+  background-color: rgba(245, 222, 179, 0);
+  outline: none;
+  border: 1px solid grey;
+}
+
+.main .chatInput .inputSend {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  color: white;
+  background-color: rgba(245, 222, 179, 0);
+  outline: none;
+  border: none;
+  font-weight: bold;
+}
+
+.main .chatInput .inputSend:hover {
+  color: black;
+  background-color: #db9d47;
+  cursor: pointer;
+}
+
+.roomChat::-webkit-scrollbar {
+  width: 4px;
+}
+
+.roomChat::-webkit-scrollbar-thumb {
+  background-color: #db9d47;
   border-radius: 20px;
-  /* roundness of the scroll thumb */
-  border: 1px solid #979797;
-}
-
-.lightMode {
-  background-color: #db9d47 !important;
-  color: black !important;
-  -webkit-animation: fade 600ms ease-in alternate;
-          animation: fade 600ms ease-in alternate;
-}
-
-.lightModeTwo {
-  background-color: #e9b46b;
-  color: black !important;
-  -webkit-animation: fade 600ms ease-in alternate;
-          animation: fade 600ms ease-in alternate;
 }
 
 @-webkit-keyframes fade-in {
